@@ -11,20 +11,29 @@
 		
 		To be supported by ARIA, we need to be very specific about the roles/properties/states of each element in the page.
 		<h2>Roles</h2>
+			<ul>
+			<li><code>role="navigation"</code> for outer wrapper <code>/<div></code></li>
+			<li><code>role="menubar"</code> for <code>/<ul></code> navigation bar container</li>
+			<li><code>role="menu"</code> for second-level <code>/<ul></code> containers</li>
+			<li><code>role="presentation"</code> for first- and second-level <code>/<li></code> menu items (they exposed accessible menubar structure)</li>
+			<li><code>role="menuitem"</code> for first- and second-level <code>/<a></code> menu items</li>
 
 		<h3>References:</h3>
 		<a href="https://www.w3.org/TR/wai-aria/roles">W3C: The Roles Model</a>
 
 		<h2>Properties</h2>
+			<li><code>aria-haspopup="true"</code> for first-level <code>/<a></code> menu items having a submenu</li>
+			<li><code>aria-labelledby="</code>ID of previous <code>/<a></code> menu item" for second-level<code>/<ul></code> containers.</li>
+
 
 		<h2>States</h2>
 			<ul>
 			<li><code>aria-selected="true"</code> on currently visited first- or second level <code>/<a/></code> item.</li>
 			<li><code>aria-selected="false"</code> on the other <code>/<a/> items. That is to enforce the concept "selected <==> current page".</li>
-			<li><code>aria-expanded="true/false" for second-level /<ul> containers</code></li>
-			<li><code></code></li>
-			<li><code></code></li>
-			<li><code></code></li>
+			<li><code>aria-expanded="true/false" for second-level /<ul> containers.</code></li>
+			<li><code>aria-hidden"true/false"</code> for second-level /<ul> containers.</li>
+			<li><code>aria-activedescendant="" for main /<ul> navigation bar containers. This is an alternative to working with tabindex.</code></li>
+			<li><code>tab-index=0</code> on currently visited <code>/<a></code> item; <code>tab-index=-1</code> on the other <code>/<a></code> items. That is in order to first focus on the current page when tabbing to the navigation bar. It is an alternative to working with aria-activedescendant.</li>
 
 
 			</ul>	
