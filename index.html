@@ -7,18 +7,22 @@
 <body>
 
 	<h1>WAI-ARIA Implementation of a Navigation Bar</h1>
-	<div> <!-- Outer wrapper -->
-	  <ul> <!-- Main navigation bar container -->
-	    <li> <!-- First-level item without submenu -->
-	      <a> <!-- Destination URL -->
+	<p>
+		To be supported by ARIA, we need to be very specific about the roles/properties/states of each element in the page.
+	</p>
+	<div role="navigation"> <!-- Outer wrapper -->
+	  <ul role="menubar"> <!-- Main navigation bar container -->
+	    <li role="presentation"> <!-- First-level item without submenu -->
+	      <a role="menuitem"> <!-- Destination URL -->
+
 	      </a>
 	    </li>
-	    <li> <!-- First-level item with submenu -->
-	      <a> <!-- Destination URL -->
+	    <li role="presentation"> <!-- First-level item with submenu -->
+	      <a role="menuitem"> <!-- Destination URL -->
 	      </a>
-	      <ul> <!-- Second-level menu container -->
-	        <li> <!-- Second-level item -->
-	          <a>
+	      <ul role="menu"> <!-- Second-level menu container -->
+	        <li role="presentation"> <!-- Second-level item -->
+	          <a role="menuitem">
 	          </a> <!-- Destination URL -->
 	        </li>
 	      </ul>
