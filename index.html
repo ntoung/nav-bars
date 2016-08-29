@@ -8,7 +8,38 @@
 
 	<h1>WAI-ARIA Implementation of a Navigation Bar</h1>
 	<p>
+		
 		To be supported by ARIA, we need to be very specific about the roles/properties/states of each element in the page.
+		<h2>Roles</h2>
+
+		<h3>References:</h3>
+		<a href="https://www.w3.org/TR/wai-aria/roles">W3C: The Roles Model</a>
+
+		<h2>Properties</h2>
+
+		<h2>States</h2>
+			<ul>
+			<li><code>aria-selected="true"</code> on currently visited first- or second level <code>/<a/></code> item.</li>
+			<li><code>aria-selected="false"</code> on the other <code>/<a/> items. That is to enforce the concept "selected <==> current page".</li>
+			<li><code>aria-expanded="true/false" for second-level /<ul> containers</code></li>
+			<li><code></code></li>
+			<li><code></code></li>
+			<li><code></code></li>
+
+
+			</ul>	
+
+		<h2>Keyboard</h2>
+		<ul>
+			<li><strong>Tab:</strong> Move focus in/out of the menu from other points in the web application.</li>
+			<li><strong>Shift+Tab:</strong> Move focus in/out of the menu from other points in the web application, in the reversed order.</li>
+			<li><strong>Right arrow:</strong> Next navigation bar item.</li>
+			<li><strong>Left arrow:</strong> Previous navigation bar item.</li>
+			<li><strong>Enter:</strong> Activate currently focused item (i.e. navigate to corresponding URL).</li>
+			<li><strong>Space:</strong> Activate currently focused item (i.e. navigate to corresponding URL).</li>
+		</ul>
+
+
 	</p>
 	<div role="navigation"> <!-- Outer wrapper -->
 	  <ul role="menubar"> <!-- Main navigation bar container -->
